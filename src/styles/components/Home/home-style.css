@@ -1,0 +1,36 @@
+.home-wrap {
+  width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.home-wrap .home-item {
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+.home-wrap .home-item .home-name {
+  position: relative;
+  font-size: 1.5rem;
+}
+.home-wrap .home-item .home-quote {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  font-weight: 400;
+  width: -moz-max-content;
+  width: max-content;
+}
+.home-wrap .home-item .home-specialist {
+  color: rgb(255, 0, 0);
+}
+.home-wrap .home-item .home-hireMe-con {
+  width: 40%;
+  height: 100%;
+  z-index: 999 !important;
+  position: absolute;
+  background-color: 0;
+  transform: translateY(-30);
+}/*# sourceMappingURL=home-style.css.map */

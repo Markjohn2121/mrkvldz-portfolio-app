@@ -1,0 +1,109 @@
+// Variables for colors and sizes
+$header-height: 60px;
+$footer-height: 40px;
+$nav-width: 250px;
+$mobile-breakpoint: 768px;
+// Global styles
+.App {
+    position: relative;
+    // background-color: rgb(70, 70, 70);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    // margin-top: -1.3em;
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: "header header" "nav main" "footer footer";
+    grid-template-rows: $header-height auto $footer-height;
+    grid-template-columns: $nav-width auto;
+    height: 100vh;
+    @media (max-width: $mobile-breakpoint) {
+        grid-template-areas: "header header" "main main" "footer footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+.main {
+    // background-color: rgba(199, 81, 81, 0.69);
+    grid-area: main;
+    overflow: auto;
+    // padding: 1.5em;
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important; // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+}
+
+.header {
+    background-color: transparent !important;
+    grid-area: header;
+    padding: 10px;
+    text-align: center;
+    line-height: $header-height;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+    position: relative;
+}
+
+.nav {
+    grid-area: nav;
+    padding: 20px;
+    @media (max-width: $mobile-breakpoint) {
+        display: none;
+        position: absolute;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        height: calc(100% - #{$header-height + $footer-height});
+        background-color: #e9ecef;
+        z-index: 1000;
+    }
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    grid-area: footer;
+    text-align: center;
+    color: beige;
+    p {
+        position: relative;
+        // background-color: bisque;
+        height: 100%;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #e5e5e5;
+        transition: all 0.3s ease;
+    }
+    @media (max-width: $mobile-breakpoint) {
+        display: flex;
+    }
+}
+
+// JavaScript toggle class
+.nav-active {
+    // display: block !important;
+    @media (max-width: $mobile-breakpoint) {
+        display: flex;
+    }
+}

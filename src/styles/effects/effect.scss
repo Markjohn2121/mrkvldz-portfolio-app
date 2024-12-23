@@ -1,0 +1,73 @@
+$translateX-val: 60px;
+$translateY-val: 60px;
+$transition-val: 0.5s;
+
+/* Initial state: hidden */
+
+
+/* Initial state: hidden */
+
+.fade {
+    opacity: 0;
+    transition: all $transition-val ease-in-out;
+    /* Optional: add a small vertical movement */
+}
+
+.fade-RL {
+    opacity: 0;
+    transition: all $transition-val ease-in-out;
+    transform: translateX($translateX-val);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-LR {
+    opacity: 0;
+    transition: all $transition-val ease-in-out;
+    transform: translateX(-$translateX-val);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-BU {
+    opacity: 0;
+    transition: all $transition-val ease-in-out;
+    transform: translateY($translateY-val);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-UB {
+    opacity: 0;
+    transition: all $transition-val ease-in-out;
+    transform: translateY(-$translateY-val);
+    /* Optional: add a small vertical movement */
+}
+
+
+/* State when the element is visible */
+
+.fade-visible {
+    opacity: 1;
+}
+
+.fade-RL-visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-LR-visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-BU-visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Optional: add a small vertical movement */
+}
+
+.fade-UB-visible {
+    opacity: 1;
+    transform: translateX(0);
+    /* Optional: add a small vertical movement */
+}
